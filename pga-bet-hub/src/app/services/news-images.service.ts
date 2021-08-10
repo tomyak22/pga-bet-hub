@@ -15,11 +15,11 @@ export class NewsImagesService {
 
   }
 
-  public getNewsByDate() {
+  public getNewsByDate(date: string) {
 
   }
 
-  public getNewsByPlayer() {
+  public getNewsByPlayer(playerId: number) {
 
   }
 

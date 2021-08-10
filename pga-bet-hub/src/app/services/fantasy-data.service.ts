@@ -11,11 +11,11 @@ export class FantasyDataService {
     private http: HttpClient,
   ) { }
 
-  public getDfsSlatesByTournament() {
+  public getDfsSlatesByTournament(tournamentId: number) {
 
   }
 
-  public getPlayerProjectedStatsByTournamentId() {
+  public getPlayerProjectedStatsByTournamentId(tournamentId: number) {
 
   }
 }
