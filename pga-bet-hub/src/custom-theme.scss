@@ -12,8 +12,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$pga-bet-hub-primary: mat-palette($mat-orange, 900);
-$pga-bet-hub-accent: mat-palette($mat-cyan, A400, A200, A100);
+$pga-bet-hub-primary: mat-palette($mat-deep-orange, 900);
+$pga-bet-hub-accent: mat-palette($mat-orange, 50, A200, A400);
 
 // The warn palette is optional (defaults to red).
 $pga-bet-hub-warn: mat-palette($mat-red, 400);

@@ -1,18 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PlayerTournamentProjection } from '../models/playerTournamentProjection';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BettingDataService {
-  readonly BASE_URL: string = 'https://api.sportsdata.io/golf/v2/json/'
+  readonly BASE_URL: string = 'https://api.sportsdata.io/golf/v3/json/'
+  readonly BASE_URL_V2: string = 'https://api.sportsdata.io/golf/v2/json/'
+  apiKey = '?key=39def48faca647528e049c0005b7a305'
 
   constructor(
     private http: HttpClient,
   ) { }
 
-  public getTournamentProjectionsByTournament(tournamentId: number) {
-
+  /**
+   * NNED TO PULL FROM OTHER LINK https://fantasydata.com/api/api-documentation/golf
+   * @param tournamentId 
+   * @returns 
+   */
+  public getTournamentProjectionsByTournament(tournamentId: number): Observable<PlayerTournamentProjection[]> {
+    return this.http.get<PlayerTournamentProjection[]>(this.BASE_URL_V2 + 'PlayerTournamentProjectionStats/' + tournamentId + this.apiKey)
   }
 
   public getBettingMetaData() {

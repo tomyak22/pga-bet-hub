@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from './models/player';
+import { BettingDataService } from './services/betting-data.service';
 import { SportsDataService } from './services/sports-data.service';
 
 @Component({
@@ -12,11 +13,12 @@ export class AppComponent implements OnInit {
   data;
 
   constructor(
-    public sportsDataService: SportsDataService
+    public sportsDataService: SportsDataService,
+    public bettingDataServicve: BettingDataService
     ) { }
 
   ngOnInit() {
-    this.sportsDataService.getSchedule().subscribe(data => {
+    this.bettingDataServicve.getTournamentProjectionsByTournament(443).subscribe(data => {
       this.data = data;
       console.log(this.data);
     })
