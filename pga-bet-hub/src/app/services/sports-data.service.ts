@@ -13,7 +13,9 @@ import { Season } from '../models/season';
 })
 export class SportsDataService {
   readonly BASE_URL: string = 'https://api.sportsdata.io/golf/v2/json/'
+  readonly BASE_BET_URL: string = 'https://api.sportsdata.io/api/golf/json/'
   apiKey = '?key=39def48faca647528e049c0005b7a305'
+  betApiKey = '?key=dc247d67874148e1908cd189f50d23c9'
 
   constructor(
     private http: HttpClient,
@@ -52,7 +54,7 @@ export class SportsDataService {
    * @returns the leaderboard from the tournament
    */
   public getLeaderboardByTournament(tournamentId: number): Observable<Leaderboard> {
-    return this.http.get<Leaderboard>(this.BASE_URL + 'Leaderboard/' + tournamentId + this.apiKey);
+    return this.http.get<Leaderboard>(this.BASE_BET_URL + 'Leaderboard/' + tournamentId + this.betApiKey);
   }
   
   /**

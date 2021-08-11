@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.bettingDataServicve.getTournamentProjectionsByTournament(443).subscribe(data => {
+    this.bettingDataServicve.getBettingMetaData().subscribe(data => {
       this.data = data;
       console.log(this.data);
     })
