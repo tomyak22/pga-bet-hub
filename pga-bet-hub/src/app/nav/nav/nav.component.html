@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon color="accent">more_vert</mat-icon>
+      </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>search</mat-icon>
+          <span>Search Players</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>trending_up</mat-icon>
+          <span>Previous Odds</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>feed</mat-icon>
+          <span>Latest News</span>
+        </button>
+      </mat-menu>
+    <!-- <h1 color="accent">PGA BetHub</h1> -->
+    <button mat-raised-button color="accent">Accent</button>
+</mat-toolbar>
